@@ -8,9 +8,7 @@
 
 .card {
     flex: 1;
-    flex-basis: 20%;
-    background-color: #171717;
-    color: white;
+    flex-basis: 16.7%;
     align-items: center;
     border-radius: 5px;
     border-bottom: .25rem solid #3ac9a2;
@@ -25,4 +23,29 @@
     padding: 1rem;
     font-size: 2em;
     max-width: 2em;
+}
+
+.card-white {
+    background-color: white;
+    color: black;
+}
+
+.card-blue {
+    background-color: #0E6BA8;
+    color: white;
+}
+
+.card-red {
+    background-color: #9B1D20;
+    color: white;
+}
+
+.card-yellow {
+    background-color: #E7C132;
+    color: white;
+}
+
+.card-black {
+    background-color: #171717;
+    color: white;
 }
