@@ -3,7 +3,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Game from "./components/Game/Game.tsx";
 import './App.css';
 
-const seed = 676;
+const seed = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
 function App() {
   return (
