@@ -11,7 +11,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="howto" element={<HowTo />} />
       <Route path="changes" element={<Changes />} />
-      <Route path="local/:seed" element={<Game />} />
+      <Route path="local/:seed/*" element={<Game />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );
@@ -35,6 +35,7 @@ function Home() {
           <main className="inner cover p-3" role="main">
             <h1 className="cover-heading">start or join a session</h1>
             <p className="lead">codenames is a game of guessing words related to the hints given by your spymaster</p>
+            <hr />
             <p className="lead"><Link className="btn btn-lg btn-secondary" to="/host">host game</Link></p>
             <p className="lead"><Link className="btn btn-lg btn-secondary" to="/join">join game</Link></p>
             <br/>
@@ -69,6 +70,7 @@ function HowTo() {
           <main className="inner cover p-3" role="main">
             <h1 className="cover-heading">how to play</h1>
             <p className="lead">here are some of the basic rules</p>
+            <hr />
             <p>In each game, there are two teams: blue team &amp; red team</p>
             <p>The board consists of 25 words, in rows of 5. Each team must guess their words based on clues provided by the spymaster (the person who gives the hints).</p>
             Each turn, a team's spymaster will give the team a clue in the form:
@@ -105,6 +107,7 @@ function Changes() {
           <main className="inner cover p-3" role="main">
             <h1 className="cover-heading">changes</h1>
             <p className="lead">anything new here?</p>
+            <hr />
             <p className="small" style={{margin: 0}}>version 1.0</p>
             <p>Initial Release</p>
             <p>There is not anything new here yet, but check back later for new features and improvements.</p>
