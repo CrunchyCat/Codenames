@@ -34,7 +34,7 @@ const Game = () => {
 
   const GameBoard = () => {
     return (
-      <div className="Game">
+      <>
         <div className="text-center">
           <div className="cover-container d-flex h-100 mx-auto flex-column">
             <header className="masthead mb-auto">
@@ -54,13 +54,13 @@ const Game = () => {
           </div>
         </div>
         <Board show={false} />
-      </div>
+      </>
     );
   }
 
   const Codemasters = () => {
     return (
-      <div className="Game">
+      <>
         <div className="text-center">
           <div className="cover-container d-flex h-100 mx-auto flex-column">
             <header className="masthead mb-auto">
@@ -80,13 +80,12 @@ const Game = () => {
           </div>
         </div>
         <Board show={true} />
-      </div>
+      </>
     );
   }
 
   const Settings = () => {
     return (
-      <div className="Game">
         <div className="text-center">
           <div className="cover-container d-flex h-100 mx-auto flex-column">
             <header className="masthead mb-auto">
@@ -108,7 +107,6 @@ const Game = () => {
             </main>
           </div>
         </div>
-      </div>
     );
   }
   
@@ -120,7 +118,8 @@ const Game = () => {
     if (card.color === 'black') {
       gameover = true;
       textInfo = `gameover, ${turn} wins`
-    } else if (card.color !== turn) {
+    }
+    else if (card.color !== turn) {
       turn = turn === 'blue' ? 'red' : 'blue';
       textInfo = turn === 'blue' ? 'turn: blue' : 'turn: red';
     }
@@ -141,12 +140,14 @@ const Game = () => {
   if (refreshWords) loadWords(); // Asynchronously Load Words
 
   return (
-    <Routes>
-      <Route path="/" element={<GameBoard />} />
-      <Route path="/codemasters" element={<Codemasters />} />
-      <Route path="/settings" element={<Settings />} />
-      <Route path="*" element={<GameBoard />} />
-    </Routes>
+    <div className="Game">
+      <Routes>
+        <Route path="/" element={<GameBoard />} />
+        <Route path="/codemasters" element={<Codemasters />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="*" element={<GameBoard />} />
+      </Routes>
+    </div>
   );
 };
 
