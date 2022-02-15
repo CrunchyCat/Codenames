@@ -133,7 +133,7 @@ const Game = () => {
     .concat(words.slice(9, 17).map(word => ({word, color: 'red', turned: false})),
             words.slice(17, 24).map(word => ({word, color: 'yellow', turned: false})),
             words.slice(24, 25).map(word => ({word, color: 'black', turned: false})));
-    cards.sort(() => rng() - 0.5);
+    cards.sort(() => rng() - .5);
     forceUpdate();
   }
   
